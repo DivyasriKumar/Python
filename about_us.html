@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookshelf</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html{
+    background: url("02.jpeg") ;
+    height : 100%;
+    font-family: "Fantacy", papyrus;
+}
+body {
+  margin: 0;
+  
+}
+.header {
+ 
+ padding: 10px;
+ text-align: center;
+ color:rgb(221, 175, 25);
+
+ font: inherit;
+}
+.topnav {
+  overflow: hidden;
+  background-color: whitesmoke;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  font-family: "Fantacy", papyrus;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: rgb(221, 175, 25);
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: large; 
+}
+
+/* Change color on hover */
+.topnav a:hover {
+ 
+  color:white;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  /* background-color: rgb(122, 62, 5); */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #da9008;
+  display: block;
+  transition: 0.3s;
+  float: left ;
+}
+
+.sidenav a:hover {
+  color:  rgb(231, 186, 38);/*X */
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 100%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 40px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fd02a9;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1><b><u>BookShelf</u></b></h1>
+      </div>
+      
+      <div class="topnav" >
+        <a href="index.html"> <b>Logout </a>
+          <a href="home_page.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <div id="mySidenav" class="sidenav" >
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+          <a href="wishlist.html">Wishlist</a>
+          <a href="cont_us.html">Help</a>
+          <a href="cont_us.html">Contact us</a>
+        </div>
+        
+        <div id="main">
+          
+          <span style="font-size:30px;cursor:pointer;color:rgb(221, 175, 25);" onclick="openNav()">&#9776; </span>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="column-66">
+            <h1 class="xlarge-font"style="color:white "><b>About Us :<br></h1><ul class="large-font"style="color: aquamarine;">
+                <li>This application is completely a revolution in the reading field.</li>
+                <li>We are providing books at free of cost.</li>
+                <li> All you need to do is just login with a new account or your social media accounts.</li>
+                <li>There are lots of collections in various fields. </li>
+                <li>You can select according to your wish.</li> 
+                <li>You can also upload your own collections of books here for other users.</li></ul>
+            
+            <a href="home_page.html"><button class="button">Back</button></a>
+          </div>
+          
+        </div>
+      </div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  
+}
+</script>
+
+</body>
+</html> 

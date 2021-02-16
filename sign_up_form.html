@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookshelf</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+  function matchpass(){
+  var firstpassword=document.f1.password.value;
+  var secondpassword=document.f1.password2.value;
+  
+  if(firstpassword==secondpassword){
+    if(firstpassword.length<8){
+      alert("password must contain minimum of 8 characters!");
+      return false;
+    }
+    else if(firstpassword.length>15){
+      alert("password must contain maximum of 15 characters!");
+      return false;
+    }
+    else{  return true;
+    }
+  }
+  else{
+  alert("password must be same!");
+  return false;
+  }
+  }
+  </script>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Fantacy", papyrus;
+}
+.tooltip {
+  position: relative;
+ 
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+html{
+    background: url("b.jpg") ;
+    height : 100%;
+}
+.header {
+ 
+  padding: 10px;
+  text-align: center;
+  color: cornsilk;
+  font: inherit;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: whitesmoke;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: rgb(221, 175, 25);
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: large; 
+}
+/* Change color on hover */
+.topnav a:hover {
+ 
+  color:white;
+}
+.login-page {
+  width: 360px;
+  padding: 9% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background:  rgb(253, 234, 241);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  
+  
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #FFFFFF;
+  width: 100%;
+  border: 0;
+  margin: 0 0 13px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+ 
+}
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  color: white;
+  background-color:  rgb(217, 218, 223);
+  border: 0;
+  padding: 15px;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+ 
+  cursor: pointer;
+  -webkit-transition: all 0.2 ease;
+}
+
+
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+  
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+   <div class="header">
+        <h1><b><u>BookShelf</u></b></h1>
+      </div>
+      
+      <div class="topnav"><b>
+        <a href="cont_ind.html"> Help? </a>
+        <a href="abt_ind.html">About us</a>
+        <a href="index.html">Login</a>
+      </div>
+       <div class="login-page">
+        <div class="form">
+          <form class="login-form" name="f1" action="index.html" onsubmit="return matchpass()">
+            <input type="text" placeholder="User Name" name="username"/>
+            <div class="tooltip"><input type="password" placeholder="Password" name="password"/>
+              <span class="tooltiptext">The password must contain atleast 8 characters</span>
+            </div>
+            <input type="password" placeholder="Retype Password" name="password2"/>
+            <button type="submit" >Sign up</button>
+            
+          </form>
+          
+        </div>
+</div>
+
+</body>
+</html>

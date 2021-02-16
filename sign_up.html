@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookshelf</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  function validateForm() {
+    var numbers = /^[0-9]+$/;
+    var fn = document.forms["myForm"]["fir"].value;
+    var sn = document.forms["myForm"]["sec"].value;
+    var cn = document.forms["myForm"]["con"].value;
+    var mai = document.forms["myForm"]["mail"].value;
+    if (fn == "") {
+      alert("First Name must be filled out");
+      return false;
+    }
+    else if (sn == "") {
+      alert("Second Name must be filled out");
+      return false;
+    }
+    else if (cn == "") {
+      alert("Contact Number must be filled out");
+      return false;
+    }
+    else if (mai == "") {
+      alert("Mail ID must be filled out");
+      return false;
+    }
+    else if(cn.length !=10){
+      alert("Enter valid Mobile number");
+      return false;
+    }
+    else if(cn.value.match(numbers))
+      {
+      alert("Enter valid Mobile number");
+      return false;
+    }
+  }
+  </script></head>
+<style>
+body {
+  margin: 0;
+  font-family: "Fantacy", papyrus;
+
+}
+
+.hero-image {
+  background: url(dhu.jpg) no-repeat center; 
+  background-size: cover;
+  height: 100%;
+
+  
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.header {
+ 
+  padding: 10px;
+  text-align: center;
+  color: cornsilk;
+  font: inherit;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: whitesmoke;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: rgba(245, 226, 174, 0.74);
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+ 
+  color:white;
+}
+.login-page {
+  width: 360px;
+  padding: 9% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  
+  background:  rgb(253, 234, 241);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  
+  
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #FFFFFF;
+  width: 100%;
+  border: 0;
+  margin: 0 0 13px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+ 
+}
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  color: white;
+  background-color:  rgb(217, 218, 223);
+  border: 0;
+  padding: 15px;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+ 
+  cursor: pointer;
+  -webkit-transition: all 0.2 ease;
+}
+
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 30px;
+  margin: 0 auto;
+  
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+   <div class="header">
+        <h1><b><u>BookShelf</u></b></h1>
+      </div>
+      
+      <div class="topnav" ><b>
+        <a href="cont_ind.html"> Help? </a>
+        <a href="abt_ind.html">About us</a>
+        <a href="index.html">Login</a>
+      </div>
+      
+       <div class="login-page">
+        <div class="form">
+          <form name="myForm" action="sign_up_form.html" onsubmit="return validateForm()" method="post">
+            <input type="fname" placeholder="First Name" name="fir"/>
+            <input type="sname" placeholder="Second Name" name="sec"/>
+            <input type="mobilenum" placeholder="Contact Number" name="con"/>
+            <input type="mail" placeholder="E-mail Id" name="mail"/>
+            <button type="submit">Next</a>
+            
+          </form>
+          
+        </div>
+</div>
+
+</body>
+</html>
